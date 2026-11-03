@@ -66,3 +66,18 @@ The rover also adds a little random wander of its own.
 
 Data: FlyWire connectome (Dorkenwald et al. 2024; Schlegel et al. 2024, *Nature*);
 connectivity table and model parameters from Shiu et al. 2024.
+
+## Credits and license
+
+- **Connectome:** the [FlyWire Consortium](https://flywire.ai), led by Princeton University,
+  proofread by a large community of researchers and citizen scientists. The neuron
+  reconstruction started from Google Research's automated segmentation of the FAFB electron
+  microscopy volume, which was imaged at HHMI Janelia (Zheng et al. 2018, *Cell*).
+- **Brain model:** Shiu et al. 2024, [Drosophila_brain_model](https://github.com/philshiu/Drosophila_brain_model) (MIT).
+- **Code** in this repository: MIT, see [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).
+- **Data** in `data/`: derived from FlyWire v783 and licensed under
+  [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). **Non-commercial use only.**
+  See [data/LICENSE.md](data/LICENSE.md) for sources and the changes made.
+
+This is an independent project, not affiliated with or endorsed by FlyWire, Princeton, Google,
+HHMI Janelia or the authors above.
