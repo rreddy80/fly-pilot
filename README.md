@@ -5,6 +5,12 @@ connectome from [FlyWire](https://flywire.ai) (v783: 138,639 neurons, 15 million
 simulated as leaky integrate-and-fire neurons following
 [Shiu et al., *Nature* 2024](https://github.com/philshiu/Drosophila_brain_model).
 
+**[Try it live](https://rreddy80.github.io/fly-pilot/)** (31 MB download, best on a laptop)
+
+![The rover follows the airflow to the sugar, stops to feed, then dodges a swat](media/fly-pilot.gif)
+
+*30 s of fly brain time, shown at real fly speed. In the browser it runs at about 0.3–1× that.*
+
 ```
 ./start.sh          # opens http://localhost:8765
 ```
