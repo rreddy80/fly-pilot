@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fly Pilot</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Fly Pilot</h1>
+    <p>A rover with no program of its own. A real fruit fly brain (138,639 FlyWire neurons) gets its sight, touch and taste, and the brain's own output neurons drive its wheels.</p>
+  </div>
+  <div class="clock"><span>brain time <b id="t">0.0</b> s</span><span id="speed">loading…</span></div>
+</header>
+
+<main class="grid">
+  <section class="arena-wrap">
+    <canvas id="arena" aria-label="Top-down arena with the rover, pillars and sugar"></canvas>
+    <div class="toolbar" role="group" aria-label="Click in the arena to">
+      <span>Click to</span>
+      <button data-tool="swat" aria-pressed="true">Swat</button>
+      <button data-tool="pillar" aria-pressed="false">Add pillar</button>
+      <button data-tool="food" aria-pressed="false">Move sugar</button>
+    </div>
+    <div class="loader" id="loader">Loading the fly brain (31 MB)…</div>
+  </section>
+
+  <section class="side">
+    <div class="panel">
+      <h2>Inside the brain</h2>
+      <canvas id="brain" aria-label="Front view of the fly brain with firing neurons lit"></canvas>
+      <div class="legend"><span><i class="dot in"></i>sensory input</span><span><i class="dot out"></i>firing</span></div>
+    </div>
+
+    <div class="panel two">
+      <div>
+        <h2>Senses <small>rover → brain</small></h2>
+        <div id="senses" class="bars"></div>
+      </div>
+      <div>
+        <h2>Brain outputs <small>brain → wheels</small></h2>
+        <div id="outputs" class="bars"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Behavior</h2>
+      <div class="cmd"><b id="state">exploring</b><span id="cmd">–</span></div>
+      <div class="stats" id="stats"></div>
+      <ol class="events" id="events"></ol>
+    </div>
+
+    <div class="panel">
+      <h2>Knock out a circuit</h2>
+      <div id="kos" class="kos"></div>
+    </div>
+
+    <div class="panel row">
+      <label><input type="checkbox" id="autoswat" checked> Swat every 7 s</label>
+      <button class="btn" id="pause">Pause</button>
+      <button class="btn" id="reset">New arena</button>
+    </div>
+  </section>
+</main>
+
+<script src="world.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
